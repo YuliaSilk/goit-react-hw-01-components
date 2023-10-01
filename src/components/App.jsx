@@ -5,7 +5,7 @@ import transactions from "./data/transactions.json";
 
 import { Profile } from './Profile/profile';
 import { Statistics } from './Statistics/statistics';
-import { FriendList } from './Profile/profile';
+import { FriendList } from './FriendList/friendList';
 import { TransactionHistory } from './TransactionHistory/transactionHistory';
 
 

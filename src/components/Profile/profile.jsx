@@ -1,6 +1,7 @@
 import PropTypes from "prop-types";
 import styles from "./profile.module.css";
 import user from "../data/user.json";
+// import { FriendList } from "components/FriendList/friendList";
 
 const profileApp = () => {
     return (

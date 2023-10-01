@@ -6,12 +6,12 @@ import friends from "../data/friends.json"
 const friendListItemApp = () => {
     return (
         <div>
-            <friends
+            <FriendListItem
             avatar={friends.avatar}
             name={friends.name}
             isOnline={friends.isOnline || friends.isOffline}
             id={friends.id}>
-            </friends>
+            </FriendListItem>
             
         </div>
     )
