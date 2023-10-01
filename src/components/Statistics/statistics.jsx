@@ -4,7 +4,7 @@ import styles from "./statistics.module.css";
 import data from "../data/data.json";
 
 
-const App = () => {
+const statisticsApp = () => {
     return (
         <div>
             <Statistics
@@ -15,9 +15,10 @@ const App = () => {
         </div>
     );
 };
-App();
+statisticsApp();
 
-const Statistics = ({ title, stats }) => (
+export const Statistics = ({ title, stats }) => {
+return (
     <section className={styles.Statistics}>
         {title && <h2 className={styles.title}>{title}</h2>}
         <ul className={styles['stat-list']}>
@@ -30,7 +31,7 @@ const Statistics = ({ title, stats }) => (
         </ul>
     </section>
 );
-
+}
 Statistics.propTypes = {
     title: PropTypes.string,
     stats: PropTypes.arrayOf(
@@ -42,4 +43,4 @@ Statistics.propTypes = {
     ).isRequired,
 };
 
-export default Statistics;
+

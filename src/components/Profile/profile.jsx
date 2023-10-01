@@ -1,9 +1,8 @@
-import React from "react";
 import PropTypes from "prop-types";
 import styles from "./profile.module.css";
 import user from "../data/user.json";
 
-const Profile = () => {
+const profileApp = () => {
     return (
       <div>
         <Profile
@@ -16,33 +15,34 @@ const Profile = () => {
       </div>
     );
   };
-//   App();
+  profileApp();
 
-// const Profile = ({ username, tag, location, avatar, stats }) => (
-//     <div className={styles.profile}>
-//         <div className={styles.description}>
-//             <img src={avatar} alt="User avatar" className={styles.avatar}></img>
-//             <h2 className={styles.name}>{username}</h2>
-//             <span className={styles.tag}>@{tag}</span>
-//             <span className={styles.location}>{location}</span>
-//         </div>
-//         <ul className={styles.stats}>
-//             <li>
-//                 <span className={styles.label}>Follovers</span>
-//                 <span className={styles.quantity}>{stats.follovers}</span>
-//             </li>
-//             <li>
-//                 <span className={styles.label}>Views</span>
-//                 <span className={styles.quantity}>{stats.views}</span>
-//             </li>
-//             <li>
-//                 <span className={styles.label}>Likes</span>
-//                 <span className={styles.quantity}>{stats.likes}</span>
-//             </li>
-//         </ul>
-//     </div>
-// )
-
+export const Profile = ({ username, tag, location, avatar, stats }) => {
+    return (
+    <div className={styles.profile}>
+        <div className={styles.description}>
+            <img src={avatar} alt="User avatar" className={styles.avatar}></img>
+            <h2 className={styles.name}>{username}</h2>
+            <span className={styles.tag}>@{tag}</span>
+            <span className={styles.location}>{location}</span>
+        </div>
+        <ul className={styles.stats}>
+            <li>
+                <span className={styles.label}>Follovers</span>
+                <span className={styles.quantity}>{stats.follovers}</span>
+            </li>
+            <li>
+                <span className={styles.label}>Views</span>
+                <span className={styles.quantity}>{stats.views}</span>
+            </li>
+            <li>
+                <span className={styles.label}>Likes</span>
+                <span className={styles.quantity}>{stats.likes}</span>
+            </li>
+        </ul>
+    </div>
+)
+} 
 Profile.propTypes = {
     username: PropTypes.string.isRequired,
     tag: PropTypes.string.isRequired,
@@ -55,4 +55,4 @@ Profile.propTypes = {
     }).isRequired,
 };
 
-export default Profile;
+

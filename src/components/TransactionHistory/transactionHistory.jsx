@@ -3,7 +3,7 @@ import PropTypes from ".prop-types";
 import styles from './transactionHistory.module.css';
 import transactions from "../data/transactions.json";
 
-const App = () => {
+const transactionHistoryApp = () => {
     return (
         <div>
             <TransactionHistory
@@ -15,9 +15,10 @@ const App = () => {
         </div>
     )
 }
-App();
+transactionHistoryApp();
 
-const TransactionHistory = ({ items }) => (
+export const TransactionHistory = ({ items }) => {
+    return (
     <table className={styles['transaction-history']}>
         <thead>
             <tr>
@@ -36,7 +37,8 @@ const TransactionHistory = ({ items }) => (
             ))}
         </tbody>
     </table>
-);
+); 
+}
 
 TransactionHistory.propTypes = {
     items: PropTypes.arrayOf(
@@ -49,4 +51,3 @@ TransactionHistory.propTypes = {
     ).isRequired,
 };
 
-export default TransactionHistory;
