@@ -1,10 +1,8 @@
-import React from "react";
-import PropTypes from "prop-types";
 import styles from './transactionHistory.module.css';
 
 export const TransactionHistory = ({ items }) => {
     return (
-        <div>
+       
     <table className={styles['transaction-history']}>
         <thead>
             <tr>
@@ -23,36 +21,23 @@ export const TransactionHistory = ({ items }) => {
             ))}
         </tbody>
     </table>
-    </div>
+    
 ); 
 }
 
-TransactionHistory.propTypes = {
-    item: PropTypes.arrayOf(
-        PropTypes.shape({
-            id: PropTypes.string.isRequired,
-            type: PropTypes.string.isRequired,
-            amount: PropTypes.string.isRequired,
-            currently: PropTypes.string.isRequired,
-        })
-    ).isRequired,
-};
+
+
+// TransactionHistory.propTypes = {
+//     item: PropTypes.arrayOf(
+//         PropTypes.shape({
+//             id: PropTypes.string.isRequired,
+//             type: PropTypes.string.isRequired,
+//             amount: PropTypes.string.isRequired,
+//             currently: PropTypes.string.isRequired,
+//         })
+//     ).isRequired,
+// };
 
 
 
 
-// import transactions from "../data/transactions.json";
-
-// const transactionHistoryApp = () => {
-//     return (
-//         <div>
-//             <TransactionHistory
-//             id={transactions.id}
-//             type={transactions.type}
-//             amount={transactions.amount}
-//             currently={transactions.currently}>
-//             </TransactionHistory>
-//         </div>
-//     )
-// }
-// transactionHistoryApp();
