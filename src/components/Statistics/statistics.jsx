@@ -3,7 +3,7 @@ import styles from "./statistics.module.css";
 
 export const Statistics = ({ title, stats }) => {
 return ( <div>
-    <section className={styles.Statistics}>
+    <section className={styles.statistics}>
         {title && <h2 className={styles.title}>{title}</h2>}
         <ul className={styles.statList}>
             {stats.map((stat) => (
@@ -22,30 +22,5 @@ return ( <div>
 
 
 
-// Statistics.propTypes = {
-//     title: PropTypes.string,
-//     stats: PropTypes.arrayOf(
-//         PropTypes.shape({
-//             id: PropTypes.string.isRequired,
-//             label: PropTypes.string.isRequired,
-//             percentage: PropTypes.number.isRequired,
-//         })
-//     ).isRequired,
-// };
 
 
-// import data from "../data/data.json";
-
-
-// const statisticsApp = () => {
-//     return (
-//         <div>
-//             <Statistics
-//                 id={data.id}
-//                 label={data.label}
-//                 percentage={data.percentage}
-//                 />
-//         </div>
-//     );
-// };
-// statisticsApp();

@@ -1,22 +1,31 @@
 import styles from './transactionHistory.module.css';
 
+//    <thead>
+// {/* <tr className={style.head}>
+// <th className={style.headItem}>Type</th>
+// <th className={style.headItem}>Amount</th>
+// <th className={style.headItem}>Currency</th>
+// // </tr> */}
+// </thead>
+
+
 export const TransactionHistory = ({ items }) => {
     return (
        
-    <table className={styles['transaction-history']}>
+    <table className={styles.transactionHistory}>
         <thead>
-            <tr>
-                <th>Type</th>
-                <th>Amount</th>
-                <th>Currency</th>
+            <tr className={styles.head}>
+                <th className={styles.headItem}>Type</th>
+                <th className={styles.headItem}>Amount</th>
+                <th className={styles.headItem}>Currency</th>
             </tr>
         </thead>
         <tbody>
             {items.map((item) => (
-                <tr key={item.id}>
-                    <td>{item.type}</td>
-                    <td>{item.amount}</td>
-                    <td>{item.currently}</td>
+                <tr key={item.id} className={styles.eachItem} >
+                    <td className={styles.itemType}>{item.type}</td>
+                    <td className={styles.itemPart}>{item.amount}</td>
+                    <td className={styles.itemPart}>{item.currently}</td>
                 </tr>
             ))}
         </tbody>
@@ -27,16 +36,6 @@ export const TransactionHistory = ({ items }) => {
 
 
 
-// TransactionHistory.propTypes = {
-//     item: PropTypes.arrayOf(
-//         PropTypes.shape({
-//             id: PropTypes.string.isRequired,
-//             type: PropTypes.string.isRequired,
-//             amount: PropTypes.string.isRequired,
-//             currently: PropTypes.string.isRequired,
-//         })
-//     ).isRequired,
-// };
 
 
 

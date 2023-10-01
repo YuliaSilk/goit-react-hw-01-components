@@ -7,7 +7,8 @@ export const Profile = (props) => {
     const avatar = props.avatar;
     const stats = props.stats;
 
-    return <div className={styles.profile}>
+    return <div className={styles.container}>
+    <div className={styles.profile}>
              <div className={styles.description}>
                 <img src={avatar} alt="User avatar" className={styles.avatar}></img>
                  <h2 className={styles.name}>{username}</h2>
@@ -28,6 +29,7 @@ export const Profile = (props) => {
                      <p className={styles.quantity}>{stats.likes}</p>
                  </li>
             </ul>
+       </div>
        </div>
 }
 
@@ -71,22 +73,6 @@ export const Profile = (props) => {
 // };
 
 
-// import user from "../data/user.json";
-// import { FriendList } from "components/FriendList/friendList";
 
-// const profileApp = () => {
-//     return (
-//       <div>
-//         <Profile
-//           username={user.username}
-//           tag={user.tag}
-//           location={user.location}
-//           avatar={user.avatar}
-//           stats={user.stats}
-//         />
-//       </div>
-//     );
-//   };
-//   profileApp();
 
 
