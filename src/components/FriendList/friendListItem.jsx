@@ -9,7 +9,7 @@ const App = () => {
             <friends
             avatar={friends.avatar}
             name={friends.name}
-            // isOnline={ isOnline ? isOffline}
+            isOnline={friends.isOnline || friends.isOffline}
             id={friends.id}>
             </friends>
             
