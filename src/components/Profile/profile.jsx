@@ -1,22 +1,7 @@
 import PropTypes from "prop-types";
 import styles from "./profile.module.css";
-import user from "../data/user.json";
-// import { FriendList } from "components/FriendList/friendList";
 
-const profileApp = () => {
-    return (
-      <div>
-        <Profile
-          username={user.username}
-          tag={user.tag}
-          location={user.location}
-          avatar={user.avatar}
-          stats={user.stats}
-        />
-      </div>
-    );
-  };
-  profileApp();
+
 
 export const Profile = ({ username, tag, location, avatar, stats }) => {
     return (
@@ -55,5 +40,24 @@ Profile.propTypes = {
         likes: PropTypes.number.isRequired,
     }).isRequired,
 };
+
+
+// import user from "../data/user.json";
+// import { FriendList } from "components/FriendList/friendList";
+
+// const profileApp = () => {
+//     return (
+//       <div>
+//         <Profile
+//           username={user.username}
+//           tag={user.tag}
+//           location={user.location}
+//           avatar={user.avatar}
+//           stats={user.stats}
+//         />
+//       </div>
+//     );
+//   };
+//   profileApp();
 
 

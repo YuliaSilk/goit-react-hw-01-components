@@ -1,24 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from './transactionHistory.module.css';
-import transactions from "../data/transactions.json";
-
-const transactionHistoryApp = () => {
-    return (
-        <div>
-            <TransactionHistory
-            id={transactions.id}
-            type={transactions.type}
-            amount={transactions.amount}
-            currently={transactions.currently}>
-            </TransactionHistory>
-        </div>
-    )
-}
-transactionHistoryApp();
 
 export const TransactionHistory = ({ items }) => {
     return (
+        <div>
     <table className={styles['transaction-history']}>
         <thead>
             <tr>
@@ -37,6 +23,7 @@ export const TransactionHistory = ({ items }) => {
             ))}
         </tbody>
     </table>
+    </div>
 ); 
 }
 
@@ -51,3 +38,21 @@ TransactionHistory.propTypes = {
     ).isRequired,
 };
 
+
+
+
+// import transactions from "../data/transactions.json";
+
+// const transactionHistoryApp = () => {
+//     return (
+//         <div>
+//             <TransactionHistory
+//             id={transactions.id}
+//             type={transactions.type}
+//             amount={transactions.amount}
+//             currently={transactions.currently}>
+//             </TransactionHistory>
+//         </div>
+//     )
+// }
+// transactionHistoryApp();

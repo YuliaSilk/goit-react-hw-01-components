@@ -1,21 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import styles from "./statistics.module.css";
-import data from "../data/data.json";
 
-
-const statisticsApp = () => {
-    return (
-        <div>
-            <Statistics
-                id={data.id}
-                label={data.label}
-                percentage={data.percentage}
-                />
-        </div>
-    );
-};
-statisticsApp();
 
 export const Statistics = ({ title, stats }) => {
 return (
@@ -44,3 +30,18 @@ Statistics.propTypes = {
 };
 
 
+// import data from "../data/data.json";
+
+
+// const statisticsApp = () => {
+//     return (
+//         <div>
+//             <Statistics
+//                 id={data.id}
+//                 label={data.label}
+//                 percentage={data.percentage}
+//                 />
+//         </div>
+//     );
+// };
+// statisticsApp();
