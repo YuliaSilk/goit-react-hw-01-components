@@ -9,9 +9,6 @@ export const FriendList = ({ friends }) => {
                 <img className={styles.avatar} src={friend.avatar} alt="User avatar"></img>
                 <p className={styles.name}>{friend.name}</p>
             </li>
-        //    <FriendListItem 
-        //     key={friend.id}   // {...friend}  // avatar={friends.avatar}  // name={friends.name}  // isOnline={friends.isOnline || friends.isOffline}
-            // />
         ))}
     </ul>
     </div>
